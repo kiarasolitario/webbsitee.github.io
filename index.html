@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/.jpg" href="../img/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    I've used the external CSS in making this so make sure that the CSS file, is on a folder named css
+    
+    REMEMBER!!: 
+    The "html folder" and the "css folder" should be in the same folder!!
+    If not, then it will not work!!
+    -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/screen_sizes.css">
+    <link rel="stylesheet" href="../css/css_variables.css">
+    
+    <title>DF-CAM</title>
+    
+    
+</head>
+<body>
+    <!-- for the dotted Background -->
+    <div class="pattern"></div>
+
+
+
+
+
+
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+        <div class="line">
+            <div class="LOGO">
+                <img src="../img/logo.png">
+            </div>
+            <div class="nav-content">
+                <a href="#">Home</a>
+                <a href="contact.html">Contacts</a>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    <!-- heading -->
+    <header>
+        <div class="heading-container">
+            <div class="heading-content">
+                <h1>DF-CAM</h1>
+                <p>Pictures around and inside the campus!</p>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+    <!-- web description -->
+    <div class="web-description">
+        <!-- image of the description -->
+        <div class="img"></div>
+        <div class="disc">
+            <!-- put the description here -->
+            <h1>Welcome</h1>
+            <p>DF-CAM showcases the diverse viewpoints of DFCAMCLP Satellite Campus students. Dive into personal stories, experiences, and insights that bring the campus to life from different perspectives. See campus life through the eyes of our students!</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+    <!-- categorize-galleries -->  
+    <div class="categorize-galleries">
+        <div class="title">
+            <h2>Categorized Galleries</h2>
+        </div>
+        <div class="galleries">
+            <div class="landscapes">
+                <h3>Land Scapes</h3>
+                <div class="card-button">
+                    <a onclick=showLandscape() class="link-button">View</a>
+                </div>
+            </div>
+            <div class="portraits">
+                <h3>Portraits</h3>
+                <div class="card-button">
+                    <a onclick=showPortrait() class="link-button">View</a>
+                </div>
+            </div>
+            <div class="events">
+                <h3>Events</h3>
+                <div class="card-button">
+                    <a onclick=showEvents() class="link-button">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- landscapes Pop-up -->
+    <dialog id="landscape-popup" class="popup-galleries .popup-slide-anim">
+        <div class="popup-galleries-titlecard">
+            <h1> Landscapes </h1>
+            <button onclick=closeLandscape()> X </button>
+        </div>
+        <div class="popup-galleries-containers">
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="portrait-popup" class="popup-galleries">
+        <div class="popup-galleries-titlecard">
+            <h1> Portraits </h1>
+            <button onclick=closePortrait()> X </button>
+        </div>
+        <div class="popup-galleries-containers">
+            <div class="photo">
+                <a href="../img/portrait-example.webp" target="_blank"><img src="../img/portrait-example.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/portrait.jpg" target="_blank"><img src="../img/portrait.jpg" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/portrait-example.webp" target="_blank"><img src="../img/portrait-example.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/portrait-example.webp" target="_blank"><img src="../img/portrait-example.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/portrait-example.webp" target="_blank"><img src="../img/portrait-example.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/portrait-example.webp" target="_blank"><img src="../img/portrait-example.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/portrait-example.webp" target="_blank"><img src="../img/portrait-example.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/portrait-example.webp" target="_blank"><img src="../img/portrait-example.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/portrait-example.webp" target="_blank"><img src="../img/portrait-example.webp" alt="An Image"></a>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="event-popup" class="popup-galleries">
+        <div class="popup-galleries-titlecard">
+            <h1> Events </h1>
+            <button onclick=closeEvents()> X </button>
+        </div>
+        <div class="popup-galleries-containers">
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+            <div class="photo">
+                <a href="../img/back-drop.webp" target="_blank"><img src="../img/back-drop.webp" alt="An Image"></a>
+            </div>
+        </div>
+    </dialog>
+
+
+
+
+
+
+
+
+    <!-- about -->
+    <div class="about">
+        <!-- title piece -->
+        <div class="title">
+            <h2>About</h2>
+        </div>
+        <!-- the contents -->
+        <div class="about-container">
+            <div class="about-img"></div>
+            <!-- the words -->
+            <div class="about-content">
+                <h2>Capturing Life's Beautiful Moments</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rem facilis quasi accusantium impedit iste ipsum cumque ad quod iusto, obcaecati facere hic quaerat reprehenderit! Sit alias rem optio ex?</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- styles and approach -->
+    <div class="s-a">
+        <div class="s-a-container">
+            <div class="s-a-content">
+                <h2>Style & Approach</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quod dolores voluptate quam, illo optio corrupti vel esse laudantium corporis consequatur accusantium eos minus fugiat omnis officiis nemo, veritatis quia!</p>
+            </div>
+            <div class="s-a-img"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-offer">
+            <div>
+                <h2>Want us to take a photo for you?</h2>
+                <button onclick=showForm() class="button"> Click me! </button>
+            </div>
+        </div>
+    </footer>
+	
+    <!-- infotmation form pop-up -->
+	<dialog id="info-form" class=".popup-slide-anim"> 
+		<div class="form">
+			<h1>Your Information</h1>
+			<form type="modal" class="form-con">
+				<input placeholder="Name">
+				<input placeholder="Section">
+				<input placeholder="Contact No." type="number">
+	            <div class="form-buttons">
+                    <button onclick=closeForm() class="back-button"> Cancel </button>
+				    <button onclick=openSuccess() type="submit" class="button">Submit</button>
+                </div>
+			</form>
+		</div>
+	</dialog>
+
+    <script src="../js/pop-ups.js"></script>
+    
+</body>
+</html>
