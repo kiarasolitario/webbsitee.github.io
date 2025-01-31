@@ -1,0 +1,1074 @@
+/*
+----------------------------------------------
+        Loptop screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 1350px){
+    :root {
+        --h1-font-size: 6rem;
+        --h2-font-size: 1.8rem;
+        --head-pharagraph: 16px; 
+
+        --pharagraph-size: 13px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 5rem;
+    }
+
+    /* about */
+    .about-container > div {
+        height: 50vh;
+    }
+
+    
+
+
+
+
+    /* footer */
+    .form-con {
+        width: 100%;
+        padding: 1.5rem 1.5rem;
+    }
+
+    .form-buttons > button {
+        width: 35%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+----------------------------------------------
+        Tablet screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 1015px){
+    :root {
+        --h1-font-size: 6rem;
+        --h2-font-size: 1.8rem;
+        --head-pharagraph: 16px; 
+
+        --pharagraph-size: 13px;
+        --letter-spacing: 0px;
+        --word-spacing: 0px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 5rem;
+    }
+
+
+
+
+
+    /* nav-bar */
+    .line {
+        padding: 0 3rem;
+    }
+
+    .title {
+        font-weight: bolder;
+    }
+
+
+    
+
+
+    /* header */
+    .heading-content {
+        padding: 0rem var(--web-side-margin);
+    }
+
+    .heading-content > h1 {
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* description */
+    .web-description {
+        height: fit-content;
+    }
+
+    .web-description > .desc {
+        width: 60%;
+    }
+
+    .desc > h1 {
+        font-size: 1.4rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .web-description > .img {
+        width: 40%;
+    }
+
+
+
+
+
+
+
+    /* categorized gallery */
+    .categorized-galleries {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+
+    }
+
+    .galleries > div {
+        width: 30vw;
+        height: 35vh;
+        margin: 0px 0.5rem;
+        padding: 0rem 0.5rem;
+    }
+
+    .galleries > div > h3 {
+        transform: translateY( 3.5rem);
+    }
+
+    .galleries > div > div > a {
+        font-size: var(--pharagraph-size);
+    }
+
+
+
+
+
+    /* about */
+    .about {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .about-container > div {
+        height: 45vh;
+    }
+
+    .about-container > .about-content {
+        width: 60%;
+    }
+
+    .about-content > a {
+        font-size: var(--pharagraph-size);
+    }
+
+    .about-container > .about-img {
+        width: 40%;
+    }
+
+
+
+
+
+    /* styles and approach */
+    .s-a {
+        margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    }
+    
+
+
+
+    /* footer */
+    .footer-offer {
+        margin: 0 var(--web-side-margin);
+    }
+
+    .form-con {
+        width: 100%;
+    }
+
+    .form-buttons > button {
+        width: 10vw;
+    }
+
+        /*
+    ----------------------------------------------
+        Tablet mobile screen size Contact page
+    ----------------------------------------------
+    */
+
+    .contact-containter > .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-column: 0 / 0;
+        grid-row: 0 / 0;
+        gap: 2rem;
+    }
+
+    .contact-containter > .contact-grid > .contact-card {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr;
+        padding: 1rem 1rem;
+        column-gap: 1rem;
+        min-height: 100%;
+    }
+
+    .contact-card > div {
+        min-width: fit-content;
+        min-height: fit-content;
+    }
+
+    .contact-card > .profile {
+        width: 100%;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        min-height: 100%;
+    }
+
+    .contact-card > .contact-info {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+
+    .contact-card:nth-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+    }
+
+    .contact-card:nth-child(2) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+    }
+
+    .contact-card:nth-child(3) {
+        grid-row: 3 / 4;
+        grid-column: 1 / 3;
+    }
+
+    .contact-card:nth-child(4) {
+        grid-row: 4 / 5;
+        grid-column: 1 / 3;
+    }
+
+    .contact-card:nth-child(5) {
+        grid-row:  5 / 6;
+        grid-column: 1 / 3;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+----------------------------------------------
+        Large mobile screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 760px){
+    :root {
+        --h1-font-size: 4rem;
+        --h2-font-size: 1.2rem;
+        --head-pharagraph: 16px; 
+
+        --pharagraph-size: 15px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 3rem;
+    }
+
+
+
+
+
+    /* nav-bar */
+    .line {
+        padding: 0 1rem;
+    }
+
+    .title {
+        font-weight: bolder;
+    }
+
+    
+
+
+    /* header */
+    .heading-content {
+        padding: 0rem var(--web-side-margin);
+    }
+
+    .heading-content > h1 {
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* description */
+    .web-description {
+        height: fit-content;
+    }
+
+    .web-description > .disc {
+        width: 100%;
+    }
+
+    .web-description > .disc > h1 {
+        font-size: 1.4rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .web-description > .img {
+        display: none;
+    }
+
+
+
+
+
+    /* categorized gallery */
+    .categorized-galleries {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .galleries {
+        display: grid;
+        justify-content: center;
+        padding: 2rem 0.1rem;
+        gap: 2rem;
+    }
+
+    .galleries > div {
+        width: 65vw;
+        height: 45vh;
+    }
+
+    .galleries > div > h3 {
+        transform: translateY( 5rem);
+        font-weight: bolder;
+    }
+
+    .galleries > div > div > a {
+        font-size: var(--pharagraph-size);
+    }
+    
+    .popup-galleries-titlecard > h1 {
+        font-size: calc(var(--h2-font-size) + .2rem);
+    }
+
+    .popup-galleries-titlecard > button {
+        margin: 0;
+        font-size: var(--h2-font-size);
+    }
+
+    .popup-galleries-containers {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #portrait-popup > .popup-galleries-containers {
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;    
+    }
+    
+    #portrait-popup > div > .photo > a > img {
+        height: 40vh;
+    }
+
+
+
+
+
+    /* about */
+    .about {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .about-container {
+        display: grid;
+        justify-content: center;
+    }
+
+    .about-container > .about-img {
+        height: 20vh;
+        width: 100%;
+    }
+
+    .about-container > .about-content {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .about-content > a {
+        font-size: var(--pharagraph-size);        
+    }
+
+
+
+
+
+    /* styles and approach */
+    .s-a {
+        margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    }
+
+    .s-a-container {
+        display: grid;
+        justify-content: center;
+    }
+
+    .s-a-container > div {
+        width: 100%;
+    }
+
+    .s-a-container > .s-a-img {
+        display: none;
+    }
+    
+
+
+
+    /* footer */
+    .footer-offer {
+        margin: 0 var(--web-side-margin);
+    }
+
+    .form-con {
+        width: 100%;
+        padding: 1.5rem 1.5rem;
+    }
+
+    .form-buttons > button {
+        width: 15vw;
+    }
+
+
+        /*
+    ----------------------------------------------
+        Large mobile screen size Contact page
+    ----------------------------------------------
+    */
+
+    .contact-containter > .contact-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-column: 0 / 0;
+        grid-row: 0 / 0;
+        gap: 2rem;
+    }
+
+    .contact-containter > .contact-grid > .contact-card {
+        display: grid;
+        grid-template-columns: 0.3fr 1.5fr 0.3fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 1rem 0.5rem;
+        row-gap: 1rem;
+        min-height: 100%;
+    }
+
+    .contact-card > div {
+        min-width: fit-content;
+        min-height: fit-content;
+    }
+
+    .contact-card > .profile {
+        width: 100%;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        min-height: max-content;
+    }
+
+    .contact-card > .contact-info {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+
+
+    .contact-card:nth-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .contact-card:nth-child(2) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 1;
+    }
+
+    .contact-card:nth-child(3) {
+        grid-row: 3 / 4;
+        grid-column: 1 / 1;
+    }
+
+    .contact-card:nth-child(4) {
+        grid-row: 4 / 5;
+        grid-column: 1 / 1;
+    }
+
+    .contact-card:nth-child(5) {
+        grid-row:  5 / 6;
+        grid-column: 1 / 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+----------------------------------------------
+        Medium mobile screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 420px){
+    :root {
+        --h1-font-size: 3.5rem;
+        --h2-font-size: 1.2rem;
+        --head-pharagraph: 14px; 
+
+        --pharagraph-size: 13px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 2rem;
+    }
+
+
+
+
+
+    /* nav-bar */
+    .line {
+        padding: 0 1rem;
+    }
+
+    .title {
+        font-weight: bolder;
+    }
+
+
+    
+
+
+    /* header */
+    .heading-content {
+        padding: 0rem var(--web-side-margin);
+    }
+
+    .heading-content > h1 {
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* description */
+    .web-description {
+        height: fit-content;
+    }
+
+    .disc {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .web-description > .img {
+        display: none;
+    }
+
+
+
+
+
+    /* categorized gallery */
+    .categorized-galleries {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .galleries {
+        display: grid;
+        justify-content: center;
+        padding: 2rem 0.1rem;
+        gap: 2rem;
+    }
+
+    .galleries > div {
+        width: 65vw;
+        height: 40vh;
+    }
+
+    .galleries > div > h3 {
+        transform: translateY( 4.5rem);
+        font-weight: bolder;
+    }
+
+    .galleries > div > div > a {
+        font-size: var(--pharagraph-size);
+    }
+    .popup-galleries-titlecard > h1 {
+        font-size: calc(var(--h2-font-size) + .2rem);
+    }
+
+    .popup-galleries-titlecard > button {
+        margin: 0;
+        font-size: var(--h2-font-size);
+    }
+
+    .popup-galleries-containers {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #portrait-popup > .popup-galleries-containers {
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;    
+    }
+    
+    #portrait-popup > div > .photo > a > img {
+        height: 40vh;
+    }
+
+
+
+
+
+    /* about */
+    .about {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .about-container {
+        display: grid;
+        justify-content: center;
+    }
+
+    .about-img {
+        height: 20vh;
+        width: 100%;
+    }
+
+    .about-content {
+        height: 45vh;
+        width: 100%;
+    }
+
+    .about-content > a {
+        font-size: var(--pharagraph-size);
+    }
+
+
+
+    /* styles and approach */
+    .s-a {
+        margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    }
+
+    .s-a-container {
+        display: grid;
+        justify-content: center;
+    }
+
+    .s-a-container > div {
+        width: 100%;
+
+    }
+
+    .s-a-container > div > .s-a-img {
+        display: none;
+    }
+
+    
+
+
+
+    /* footer */
+    .footer-offer {
+        margin: 0 var(--web-side-margin);
+    }
+
+    .form-buttons > button {
+        width: 20vw;
+    }
+
+    .form-con {
+        padding: 1.5rem 0.5rem;
+    }
+
+
+    /*
+    ----------------------------------------------
+        Medium mobile screen size Contact page
+    ----------------------------------------------
+    */
+
+    .contact-containter > .contact-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-column: 0 / 0;
+        grid-row: 0 / 0;
+        gap: 2rem;
+    }
+
+    .contact-containter > .contact-grid > .contact-card {
+        display: grid;
+        grid-template-columns: 0.2fr 1.5fr 0.2fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 1rem 0.5rem;
+        row-gap: 1rem;
+        min-height: 100%;
+    }
+
+    .contact-card > div {
+        min-width: fit-content;
+        min-height: fit-content;
+    }
+
+    .contact-card > .profile {
+        width: 100%;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        min-height: max-content;
+    }
+
+    .contact-card > .contact-info {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+
+
+    .contact-card:nth-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .contact-card:nth-child(2) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 1;
+    }
+
+    .contact-card:nth-child(3) {
+        grid-row: 3 / 4;
+        grid-column: 1 / 1;
+    }
+
+    .contact-card:nth-child(4) {
+        grid-row: 4 / 5;
+        grid-column: 1 / 1;
+    }
+
+    .contact-card:nth-child(5) {
+        grid-row:  5 / 6;
+        grid-column: 1 / 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+----------------------------------------------
+        Small mobile screen size
+----------------------------------------------
+*/
+@media screen and (max-width: 370px) {
+    :root {
+        --h1-font-size: 3rem;
+        --h2-font-size: 1rem;
+        --head-pharagraph: 12px; 
+
+        --pharagraph-size: 12px;
+
+        --web-topbottom-margin: 8rem;
+        --web-side-margin: 0.5rem;
+    }
+
+
+
+
+
+    /* nav-bar */
+    .line {
+        padding: 0 1rem;
+    }
+
+    .title {
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* header */
+    .heading-content {
+        padding: 0rem var(--web-side-margin);
+    }
+
+    .heading-content > h1 {
+        font-weight: bolder;
+    }
+
+
+
+
+
+    /* description */
+    .web-description {
+        height: fit-content;
+    }
+
+    .disc {
+        width: 100%;
+    }
+
+    .disc > h1 {
+        font-size: 1.4rem;
+    }
+
+    .img {
+        display: none;
+    }
+
+
+
+
+
+    /* categorized gallery */
+    .categorized-galleries {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .galleries {
+        display: grid;
+        justify-content: center;
+        padding: 2rem 0.1rem;
+        gap: 2rem;
+    }
+
+    .galleries > div {
+        width: 65vw;
+        height: 35vh;
+    }
+
+    .galleries > div > h3 {
+        transform: translateY( 4rem);
+        font-weight: bolder;
+    }
+
+    .galleries > div > div > a {
+        font-size: var(--pharagraph-size);
+    }
+
+    .popup-galleries-titlecard > h1 {
+        font-size: calc(var(--h2-font-size) + .2rem);
+    }
+
+    .popup-galleries-titlecard > button {
+        margin: 0;
+        font-size: var(--h2-font-size);
+    }
+
+    .popup-galleries-containers {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #portrait-popup > .popup-galleries-containers {
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;    
+    }
+    
+    #portrait-popup > div > .photo > a > img {
+        height: 40vh;
+    }
+
+
+
+
+
+
+    /* about */
+    .about {
+        margin: var(--web-topbottom-margin) var(--web-side-margin);
+    }
+
+    .about-container {
+        display: grid;
+        justify-content: center;
+    }
+
+    .about-img {
+        height: 20vh;
+        width: 100%;
+    }
+
+    .about-content {
+        min-height: fit-content;
+        width: 100%;
+    }
+
+    .about-content > a {
+        font-size: var(--pharagraph-size);
+    }
+
+
+
+
+    /* styles and approach */
+    .s-a {
+        margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    }
+
+    .s-a-container {
+        display: grid;
+        justify-content: center;
+    }
+
+    .s-a-container > div {
+        width: 100%;
+    }
+
+    .s-a-img {
+        display: none;
+    }
+
+
+
+    /* footer */
+    .footer-offer {
+        margin: 0 var(--web-side-margin);
+    }
+
+    .footer-offer > div {
+        gap: 0.5rem;
+    }
+
+    .form-con {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .form-buttons > button {
+        width: 50%;
+    }
+
+
+    /*
+    ----------------------------------------------
+        Small mobile screen size Contact page
+    ----------------------------------------------
+    */
+    .contact-containter > .contact-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-column: 0 / 0;
+        grid-row: 0 / 0;
+        gap: 0.8rem;
+    }
+
+    .contact-containter > .contact-grid > .contact-card {
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 1rem 0.5rem;
+        row-gap: 1rem;
+        min-height: fit-content;
+    }
+
+    .contact-card > div {
+        min-width: fit-content;
+    }
+
+    .contact-card > .profile {
+        width: 100%;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .contact-card > .contact-info {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+
+
+    .contact-card:nth-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .contact-card:nth-child(2) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 1;
+    }
+
+    .contact-card:nth-child(3) {
+        grid-row: 3 / 4;
+        grid-column: 1 / 1;
+    }
+
+    .contact-card:nth-child(4) {
+        grid-row: 4 / 5;
+        grid-column: 1 / 1;
+    }
+
+    .contact-card:nth-child(5) {
+        grid-row:  5 / 6;
+        grid-column: 1 / 1;
+    }
+
+}
+

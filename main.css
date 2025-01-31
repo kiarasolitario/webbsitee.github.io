@@ -1,0 +1,999 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; 
+    scroll-behavior: smooth;
+}
+
+/*
+CSS variables
+think of root as a container for variable it can contain values like sizes, color, and so-on.
+
+usually use to easly change a values that's repited to the whole website. like colors and various sizes of content
+*/
+:root {
+    --web-background-color: #f2f2f2;
+    --default-font-color: #2f2f2f;
+
+    --h1-font-size: 7rem;
+    --h2-font-size: 2rem;
+    --head-pharagraph: 20px;
+
+    --pharagraph-size: 18px;
+    --line-spacing: 1.2rem;
+    --letter-spacing: 1.5px;
+    --word-spacing: 2px;
+
+    --nav-bar-animation-duration: 400ms;
+
+    --web-topbottom-margin: 8rem;
+    --web-side-margin: 13rem;
+}
+
+
+
+
+
+
+/*
+===================================================================
+                            "universal css"
+    universal css is a collection of classes that has a set values,
+utillized like a css variable. Implemented by using the classes and 
+puting them in tags as a tag class. so if you change 1 value inside 
+a universal css all of the tags that has that class will also change.
+===================================================================
+*/
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--web-background-color);
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+
+    padding: 1rem 2rem;
+}
+
+.title  > h2 {
+        font-weight: lighter;
+        color: var(--default-font-color);
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        font-size: var(--h2-font-size);
+    }
+
+.link-button {
+    border: 2px solid #3ea8e6;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+
+    color: var(--default-font-color);
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.link-button:hover {
+    scale: 1.02;
+    letter-spacing: 3px;
+    background-color: #3ea8e6;
+    color: #f2f2f2;
+}
+
+.link-button:focus {
+    background-color: #3ea8e6;
+    color: #f2f2f2;
+}
+
+.button {
+	border-radius: 50px;
+	background: none;
+	color: #f2f2f2;
+	border: 2px solid #3ea8e6;
+	font-size: var(--pharagraph-size);
+	padding: 1rem 2rem;
+	cursor: pointer;
+	
+	transition: 0.5s;
+}
+
+.button:hover {
+	letter-spacing: 2px;
+	background: #3ea8e6;
+}
+
+
+
+
+
+
+
+
+
+
+
+body p {
+    line-height: var(--line-spacing);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
+}
+
+.pattern {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: -1;
+
+    background-color: #f7f7f7;
+    background-image: radial-gradient(#d7eaf5 2px, #f7f7f7 2px);
+    background-size: 60px 60px;
+    background-attachment: fixed;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    Nav bar CSS 
+--------------------------------------------------------*/
+.nav-container {
+    width: 100%;
+    background-color: #f2f2f2df;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    z-index: 100;
+}
+
+.line {
+    /* border: 2px solid red; */
+    padding: 0rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.line::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg ,#f2f2f2df, #2f2f2f, #2f2f2f, #2f2f2f, #f2f2f2df);
+}
+
+.LOGO img {
+    width: auto; 
+    height: 50px; 
+    max-width: 100%; 
+    object-fit: contain; 
+}
+
+
+
+.nav-content {
+    /* Flex display the content in a linear orientation, i recommend learning it in w3schools*/
+    display: flex; 
+    justify-content: space-evenly; /*Align items on x axis or left and right will only work if you have display flex*/
+    align-items: center; /*Align items on y axis or up and down*/
+    width: 50%;
+
+}
+
+.nav-content > a {
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: var(--default-font-color);
+    padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+    position: relative;
+    transition: var(--nav-bar-animation-duration);
+}
+
+/* animation components */
+.nav-content > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--default-font-color);
+    border-radius: 50px;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: var(--nav-bar-animation-duration);
+}
+
+.nav-content > a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-content > a:focus::after {
+    transform: scaleX(1);
+    background-color: #3ea8e6;
+}
+
+.nav-content > a:focus{
+    color: #3ea8e6;
+    scale: 1.1;
+}
+
+.nav-content > a:nth-child(1){
+   scale: 1.1;
+   color: #3ea8e6;
+}
+
+.nav-content > a:nth-child(1)::after{
+	transform: scaleX(1);
+	background:#3ea8e6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    Heading CSS 
+--------------------------------------------------------*/
+header {
+    background-image: url(../img/temporary_image/back-drop.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    height: 110vh;
+
+    font-size: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-content {
+    text-align: center;
+}
+
+.heading-container {
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient( #f2f2f26b, #f2f2f26b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-content > h1 {
+    color: var(--default-font-color);
+    text-shadow: 0rem 0rem 0.5rem #f2f2f2;
+
+    font-size: var(--h1-font-size);
+    font-family: monospace;
+    font-weight: lighter;
+    letter-spacing: 0.7rem;
+    word-spacing: 2rem;
+}
+
+.heading-content > p {
+    color: var(--default-font-color);
+    text-shadow: 0rem 0rem 0.5rem #f2f2f2;
+
+    font-size: var(--head-pharagraph);
+    font-weight: bold;
+    letter-spacing: 5px;
+    word-spacing: 0.7rem;            
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    Web description CSS 
+--------------------------------------------------------*/
+.web-description{
+    background-color: var(--web-background-color);
+    display: flex;
+    margin: -5rem var(--web-side-margin) 0rem var(--web-side-margin);
+    height: 30vh;
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+
+    padding: 0.3rem;
+}
+
+.web-description > .img {
+    width: 30%;
+    height: auto;
+    background-image: url(../img/temporary_image/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.web-description > .disc{
+    width: 100%;
+    padding: 2rem 3rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.disc > h1 {
+    width: fit-content;
+    letter-spacing: 2px;
+}
+
+.disc > p {
+    font-size: var(--pharagraph-size);
+    letter-spacing: var(--letter-spacing);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    categorize galleries
+--------------------------------------------------------*/
+.categorize-galleries {
+    /* border: 2px solid red; */
+    margin: 8rem var(--web-side-margin) var(--web-topbottom-margin) var(--web-side-margin);
+}
+
+.categorize-galleries > div {
+        /* border: 2px solid red; */
+        height: auto;
+    }
+
+.galleries {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 2rem 1rem;
+}
+
+.galleries > div {
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    height: 50vh;
+    width: 28%;
+
+    background: var(--web-background-color);
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+/* galleries card picture */
+.galleries > div:nth-child(1) {
+    background-image: url(../img/landscape/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.galleries > div:nth-child(2) {
+    background-image: url(../img/portraits/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.galleries > div:nth-child(3) {
+    background-image: url(../img/some-events/2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.galleries > div > h3 {
+    /* border: 2px solid red; */
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-align: center;
+    transform: translateY( 5rem);
+    transition: 0.5s;
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY( 4rem);
+    transition: 0.5s 0.5s;
+
+    height: 50%;
+    width: 100%; 
+    
+    /* outline: 2px solid red; */
+    
+    background: radial-gradient( #3ea8e650, #42424267, #42424200, #42424200);
+}
+
+.card-button > a {
+    color: #fafafa; 
+}
+
+.overlay {
+    border-image: fill 1 linear-gradient(#f2f2f26b, #f2f2f26b);
+    z-index: 1;
+}
+
+/* galleries animation */
+.galleries > div:hover {
+    scale: 1.02;
+}
+
+.galleries > div:hover > h3 {
+        letter-spacing: 5px;
+    }
+
+.galleries > div:hover > .card-button {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+
+
+/* the popups of galleries */
+.popup-galleries {
+    border: none;
+    margin: auto;
+    padding: 0;
+
+    height: 88vh;
+    width: 88vw;
+    border-radius: 5px;
+}
+
+.popup-galleries-titlecard{
+    margin: 1rem 1rem 0rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--default-font-color);
+}
+
+.popup-galleries-titlecard > h1 {
+    font-weight: lighter;
+    letter-spacing: 0.5rem;
+    font-size: 40px;
+    margin-left: 1rem;
+}
+
+.popup-galleries-titlecard > button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 1rem;
+    font-weight: lighter;
+    margin-right: 1rem;
+    transition: 0.3s;
+}
+
+/* animation for the X button */
+.popup-galleries-titlecard > button:hover{
+    scale: 1.1;
+}
+
+.popup-galleries-containers {
+    padding: 1rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.popup-galleries-containers > .photo {
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.photo > a > img {
+    height: 100%;
+    width: 100%;
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+    border-radius: 5px; 
+}
+
+.photo:hover{
+    scale: 1.02
+}
+
+.photo:nth-child(1) {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+}
+
+/* Landscape & Event css*/
+#landscape-popup > .popup-galleries-containers > .photo,
+#event-popup > .popup-galleries-containers > .photo {
+    height: 28vh;
+    width: 100%;
+}
+
+#landscape-popup > .popup-galleries-containers > .photo:nth-child(1),
+#event-popup > .popup-galleries-containers > .photo:nth-child(1) {
+    height: 57vh;
+}
+
+/* portrait pop-up custom CSS */
+#portrait-popup > .popup-galleries-containers {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;    
+}
+
+#portrait-popup > div:nth-child(2) > .photo:nth-child(1) {
+    grid-row: 1 / 1 ;
+    grid-column: 1 / 1; 
+}
+
+#portrait-popup > div > .photo > a > img {
+    height: 60vh;
+}
+
+/* categorized gallaries pop-up animation */
+/* where it would it exit */
+.popup-galleries {
+    display: none;
+    opacity: 0;
+    translate: 0 2vh;
+    transition-property: display opacity;
+    transition-duration: 0.5s;
+    transition-behavior: allow-discrete;
+}
+
+/* where would it come up to */
+.popup-galleries[open] {
+    display: block;
+    opacity: 1;
+    translate: 0 0;
+}
+
+/* starting animation */
+@starting-style {
+    .popup-galleries[open] {
+        opacity: 0;
+        translate: 0 -2vh;
+
+    }
+}
+
+.popup-galleries[open]::backdrop {
+    opacity: 1;
+}
+
+.popup-galleries::backdrop {
+    opacity: 0;
+    background: #4747477e;
+    transition-property: opacity display overlay;
+    transition-duration: 0.5s;
+    transition-behavior: allow-discrete;
+}
+
+@starting-style {
+    .popup-galleries[open]::backdrop {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                        About
+--------------------------------------------------------*/
+.about {
+    margin: var(--web-topbottom-margin) var(--web-side-margin);
+    color: var(--default-font-color);
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 2rem 1rem;
+}
+
+.about-container > div {
+    width: 48%;
+}
+
+
+.about-img  {
+    background-image: url(../img/some-events/2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+	
+	height: 48vh;
+}
+
+.about-content{
+    background-color: var(--web-background-color);
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+
+    padding: 2rem 1rem;
+    gap: 1rem;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+    'title title title'
+    'desc desc desc'
+    ;
+}
+
+.about-content > h2 {
+        grid-area: title;
+        font-size: var(--h2-font-size);
+    }
+
+.about-content > p {
+        grid-area: desc;
+        text-align: justify ;
+        font-size: var(--pharagraph-size);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                    Styles and Approach
+--------------------------------------------------------*/
+.s-a {
+    margin: var(--web-topbottom-margin) var(--web-side-margin) 8rem var(--web-side-margin);
+    color: var(--default-font-color);
+}
+
+.s-a-container{
+    background: var(--web-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+
+    box-shadow: #4b4b4b2a 0px 5px 0.3rem 2px;
+}
+
+.a-a-container > div {
+        height: 40vh;
+    }
+
+.s-a-content {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-template-areas: 
+    '.... .... ....'
+    's-a-h2 s-a-h2 s-a-h2'
+    's-a-p s-a-p s-a-p'
+    '.... .... ....'
+    ;
+    padding: 1rem 2rem;
+    width: 60%;
+}
+
+.s-a-content > h2 {
+        grid-area: s-a-h2;
+        font-size: var(--h2-font-size);
+    }
+
+.s-a-content > p {
+        grid-area: s-a-p;
+        font-size: var(--pharagraph-size);
+    }
+
+.s-a-img {
+    width: 40%;
+	height: 45vh;
+    background-image: url(../img/landscape/9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------
+                        Footer
+--------------------------------------------------------*/
+footer {
+    margin: var(--web-topbottom-margin) 0 0 0;
+    background-color: #2f2f2f;
+    color: #f2f2f2;
+}
+
+.footer-offer {
+    display: flex;
+    justify-content: centers;
+    align-items: center;
+    height: 35vh;
+    position: relative;
+}
+
+.footer-offer > div {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2rem;
+
+    }
+
+.footer-offer > div > h2{
+    min-width: 40vw;
+    letter-spacing: 3px;
+    letter-spacing: 2px;
+    font-size: var(--h2-font-size);
+}
+
+.footer-offer > div > a {
+    color: #f2f2f2;
+    padding: 1rem;
+    min-width: 30vw;   
+}
+
+.footer-offer > div > a:hover , 
+.footer-offer > div > a:focus {
+    letter-spacing: 0;
+}
+    
+
+/* footer's pop-up form */
+#info-form{
+	border: none;
+	border-radius: 5px;
+    padding: 0;
+	margin: auto; 
+    box-shadow: 0 0 0.5rem 0 #2b2b2b;
+}	
+
+.form {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+
+	min-height: fit-content;
+    min-width: auto;
+    padding: 3rem 2rem; 
+}
+
+.form > h1 {
+    font-weight: lighter;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+    margin-bottom: 1.2rem;
+}
+
+.form-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-con {
+	display: grid;
+	gap: 0.8rem;
+	width: 25vw;
+    padding: 1rem 2rem 0rem 2rem;
+    min-width: min-content;
+}
+
+.form-con > input, textarea{
+	padding: 0.8rem 0.8rem;
+	font-size: 12px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.form-con > textarea {
+    height: 20vh ;
+}
+
+.form-con > .upload-file{
+    opacity: 0;
+}
+
+.form-con > .button-sendpic {
+    padding: 0.2rem 0.1rem;
+    width: 10vw;
+    background: #3ea8e6;
+    cursor: pointer;
+}
+
+/* form buttons */
+.form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 0.5rem;
+}
+
+.form-buttons > button {
+    width: 20vw;
+    font-size: var(--pharagraph-size + 1rem);
+}
+
+.back-button{
+	border: none;
+	background: none;
+	font-size: var(--h2-font-size);
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.back-button:hover{
+    scale: 1.05;
+}
+
+.form-buttons > button {
+	padding: 0.6rem 0.5rem;
+	font-size: 10px;
+	color: #2f2f2f;
+	width: 5vw;
+	border-radius: 0px;
+}
+
+.form-buttons > button:nth-child(2):hover{
+	color: #f2f2f2;
+}
+
+/* Footer Form animation */
+/* where it would it exit */
+#info-form {
+    display: none;
+    opacity: 0;
+    translate: 0 5vh;
+    transition-property: displa opacity;
+    transition-duration: 0.5s;
+    transition-behavior: allow-discrete;
+}
+
+/* where would it come up to */
+#info-form[open] {
+    display: block;
+    opacity: 1;
+    translate: 0 0;
+}
+
+/* starting animation */
+@starting-style {
+    #info-form[open] {
+        opacity: 0;
+        translate: 0 -5vh;
+
+    }
+}
+
+#info-form[open]::backdrop {
+    opacity: 1;
+}
+
+#info-form::backdrop {
+    opacity: 0;
+    background: #4747477e;
+    transition-property: opacity display overlay;
+    transition-duration: 0.5s;
+    transition-behavior: allow-discrete;
+}
+
+@starting-style {
+    #info-form[open]::backdrop {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
